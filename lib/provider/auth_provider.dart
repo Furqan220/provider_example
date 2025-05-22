@@ -34,6 +34,7 @@ class AuthProvider with ChangeNotifier {
       final http.Response response = await http.post(
           Uri.parse("https://reqres.in/api/login"),
           body: {"email": email, "password": password});
+          
 
       log(response.statusCode.toString());
       log(response.body.toString());
